@@ -1,0 +1,24 @@
+---variationalRNN++---
+
+Every layer has its number of dense layer double.
+(From 2 to 4)
+
+hyperparameters :
+
+epochs = 30
+
+x_dim = 69
+x2s_dim = 250
+z_dim = 69
+z2s_dim = 250
+
+k = 1
+h_dim = 500
+
+q_z_dim = 250
+p_z_dim = 250
+p_x_dim = 250
+
+sequence = 100
+batch_size = 128
+

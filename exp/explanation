@@ -1,0 +1,53 @@
+--- VariatioanalRNN ---
+
+original network
+
+hyperparameter:
+
+epochs = 30
+
+x_dim = 69
+x2s_dim = 250
+z_dim = 69
+z2s_dim = 250
+
+k = 1
+h_dim = 500
+
+q_z_dim = 250
+p_z_dim = 250
+p_x_dim = 250
+
+sequence = 100
+batch_size = 128
+
+
+
+
+---variationalRNN+GRU_corrected---
+
+state = [ state[0], state[1], state[2] ]
+
+inputs, [state] -> GRU1[inputs, state[0]]    = o1, s1
+                   GRU2[o1, state[1]]        = o2, s2
+                   GRU3[o2, state[2]]        = o3, s3 -> outputs = 03, [state = [s1, s2, s3] ]
+
+hyperparameter:
+
+
+epochs = 30
+
+x_dim = 69
+x2s_dim = 300
+z_dim = 50
+z2s_dim = 250
+
+k = 1
+h_dim = 500
+
+q_z_dim = 250
+p_z_dim = 250
+p_x_dim = 300
+
+sequence = 100
+batch_size = 128
